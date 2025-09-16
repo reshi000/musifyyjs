@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MUSIYFYY</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Profile logo -->
+  <div class="profile-logo">
+    <a href="index1.html">
+      <img src="login.png" alt="Profile Logo">
+    </a>
+  </div>
+
+  <h1>Starving? Play a track</h1>
+
+  <!-- Search bar -->
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search songs...">
+  </div>
+
+  <!-- Song grid (JS will fill this dynamically) -->
+  <div class="song-grid" id="songGrid"></div>
+
+  <!-- Bottom Music Player -->
+  <div class="music-player" id="musicPlayer">
+    <button id="prevBtn">⏮</button>
+    <span id="currentSong">Now Playing: </span>
+    <audio id="audioPlayer" controls></audio>
+    <button id="nextBtn">⏭</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

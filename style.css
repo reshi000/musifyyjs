@@ -1,0 +1,122 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding-top: 50px;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.search-box input {
+  width: 300px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background-color: #374151;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+}
+
+.search-box input:focus {
+  border: 2px solid #10b981;
+}
+
+.song-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  width: 100%;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.song-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+}
+
+.song-card img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.song-card img:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 15px rgba(16, 185, 129, 0.6);
+}
+
+.song-card.active img {
+  border: 3px solid #10b981;
+  box-shadow: 0px 0px 20px rgba(16, 185, 129, 0.7);
+}
+
+.profile-logo {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.profile-logo a img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid #10b981;
+  transition: transform 0.3s ease;
+}
+
+.profile-logo a img:hover {
+  transform: scale(1.1);
+}
+
+/* Bottom music player */
+.music-player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  gap: 10px;
+}
+
+.music-player button {
+  background: #10b981;
+  border: none;
+  color: white;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.music-player span {
+  color: white;
+  font-weight: 500;
+}
+
+audio {
+  width: 50%;
+}
